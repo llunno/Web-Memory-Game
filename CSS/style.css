@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+
+html {
+	box-sizing: border-box;
+	line-height: 1.5;
+	font-size: 62.5%;
+}
+
+body {
+	background-color: rgb(55, 126, 49);
+}
+
+header {
+	color: white;
+	text-align: center;
+	background-color: rgb(122, 39, 39);
+	padding-bottom: 1rem;
+	padding-top: 0.4rem;
+	box-shadow: 0px 3px 10px 3px rgb(26, 25, 25);
+	border-top: 5px solid rgb(163, 131, 43);
+	border-bottom: 5px solid rgb(163, 131, 43);
+}
+
+header h1 {
+	font-family: 'Playball', cursive;
+	font-size: 7rem;
+	margin-bottom: 0.3rem;
+	text-shadow: 5px 5px 5px black;
+}
+
+button#initResetButton {
+	border-radius: 2rem;
+	font-size: 2rem;
+	padding: 1rem;
+	padding-left: 3rem;
+	padding-right: 3rem;
+	background-color: rgb(145, 104, 43);
+	color: white;
+	font-style: italic;
+}
+
+button#initResetButton:hover {
+	background-color: rgb(212, 171, 80);
+	transition: background-color 1s;
+}
+
+button#initResetButton:active {
+	transform: scale(0.94);
+}
+
+body main div#tabuleiro {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 70rem;
+	margin-top: 1.5rem;
+	margin-bottom: 2rem;
+	gap: 2.1rem;
+	border: 10px solid rgb(163, 131, 43);
+	border-radius: 1rem;
+	background-color: rgb(49, 119, 40);
+	padding: 3rem;
+	padding-left: 0;
+	padding-right: 0;
+	box-shadow: 1px 1px 10px;
+}
+
+.carta {
+	background-color: rgb(236, 226, 178);
+	width: 12rem;
+	height: 18rem;
+	border: 7px solid rgb(250, 244, 244);
+	border-radius: 0.4rem;
+	box-shadow: 3px 3px 5px 2px rgb(24, 23, 23);
+	transform-style: preserve-3d;
+	transition: transform 0.7s;
+	position: relative;
+	perspective: 1000px;
+}
+
+.carta:active {
+	transform: scale(0.85);
+}
+
+.cartaImgFront {
+	max-width: 20rem;
+	width: 90%;
+	position: absolute;
+	top: 4rem;
+	right: 5%;
+	backface-visibility: hidden;
+}
+
+.cartaImgBack {
+	backface-visibility: hidden;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.cartaImgFront {
+	transform: rotateY(180deg);
+}
+
+.flip {
+	transform: rotateY(180deg);
+}
+
+#contadoresSection {
+	display: flex;
+	max-width: 80rem;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-left: auto;
+	margin-right: auto;
+	row-gap: 1rem;
+	column-gap: 0.3rem;
+	align-items: center;
+}
+
+#contador,
+#record {
+	color: white;
+	margin-top: 1rem;
+	text-shadow: 1px 1px 5px black;
+	margin-left: 1rem;
+	margin-right: 1rem;
+	font-size: 4rem;
+}
+
+#record {
+	background-color: transparent;
+	border: 0px;
+}
+
+#record:active {
+	transform: scale(0.94);
+}
+
+/*
+Referências ícones das cartas:
+Html 5 icon by Icons8 - "https://icons8.com"
+https://vetores.org/
+*/
